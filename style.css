@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+}
+body
+{
+    background-color: rgb(37, 37, 37);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.navigation
+{
+    position: relative;
+    background: rgb(50, 139, 255);
+    height: 500px;
+    width: 65px;
+    margin: 0px 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    transition: .5s;
+}
+.navigation.active
+{
+    position: relative;
+    background: rgb(50, 139, 255);
+    height: 500px;
+    width: 250px;
+    margin: 0px 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+}
+.navigation .toggle
+{
+    position: absolute;
+    top: 440px;
+    left: 7.5px;
+    background: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 0px rgb(0,0,0,.4);
+    transition: .5s;
+}
+.navigation.active .toggle
+{
+    position: absolute;
+    top: 440px;
+    left: 190.5px;
+    background: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 0px rgb(0,0,0,.4);
+}
+.navigation .toggle::after
+{
+    content: '';
+    position: absolute;
+    background: rgb(37, 37, 37);
+    width: 35px;
+    height: 5px;
+    border-radius: 5px;
+    top: 17.5px;
+    left: 7.5px;
+    transition: .5s;
+}
+.navigation .toggle::before
+{
+    content: '';
+    position: absolute;
+    background: rgb(37, 37, 37);
+    width: 35px;
+    height: 5px;
+    border-radius: 5px;
+    top: 27.5px;
+    left: 7.5px;
+    transition: .5s;
+}
+.navigation.active .toggle::after
+{
+    content: '';
+    position: absolute;
+    background: rgb(37, 37, 37);
+    width: 35px;
+    height: 5px;
+    border-radius: 5px;
+    top: 22.5px;
+    left: 7.5px;
+    transform: rotateZ(225deg);
+}
+.navigation.active .toggle::before
+{
+    content: '';
+    position: absolute;
+    background: rgb(37, 37, 37);
+    width: 35px;
+    height: 5px;
+    border-radius: 5px;
+    top: 22.5px;
+    left: 7.5px;
+    transform: rotateZ(-225deg);
+}
+.navigation ul
+{
+    width: 100%;
+}
+.navigation ul li
+{
+    position: relative;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    margin-left: 2.5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    user-select: none;
+}
+.navigation ul li:hover
+{
+    background: rgb(37, 37, 37);
+}
+.navigation ul li.active
+{
+    background: rgb(37, 37, 37);
+}
+.navigation ul li:nth-child(1)
+{
+    top: 25px;
+    margin-bottom: 45px;
+    background: none;
+}
+.navigation ul li a
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.navigation ul li:hover:not(:first-child) a
+{
+    color: rgb(50, 139, 255);
+}
+.navigation ul li:hover:not(:first-child) a span
+{
+    text-shadow: 0px 0px 5px rgb(50, 139, 255);
+}
+.navigation ul li.active:not(:first-child) a
+{
+    color: rgb(50, 139, 255);
+}
+
+.navigation ul li.active:not(:first-child) a span
+{
+    text-shadow: 0px 0px 5px rgb(50, 139, 255);
+}
+.navigation ul li:hover:not(:first-child):after
+{
+    content: '';
+    position: absolute;
+    display: flex;
+    background-color: transparent;
+    height: 25px;
+    width: 25px;
+    left: 100%;
+    transform: translateX(-28px)translateY(-25px);
+    border-bottom-right-radius: 15px;
+    box-shadow: 5px 5px 0px 0px rgb(37, 37, 37);
+}
+.navigation ul li:hover:not(:first-child)::before
+{
+    content: '';
+    position: absolute;
+    display: flex;
+    background-color: transparent;
+    height: 25px;
+    width: 25px;
+    left: 100%;
+    top: 85px;
+    transform: translateX(-28px)translateY(-25px);
+    border-top-right-radius: 15px;
+    box-shadow: 5px -5px 0px 0px rgb(37, 37, 37);
+}
+.navigation ul li.active:not(:first-child):after
+{
+    content: '';
+    position: absolute;
+    display: flex;
+    background-color: transparent;
+    height: 25px;
+    width: 25px;
+    left: 100%;
+    transform: translateX(-28px)translateY(-25px);
+    border-bottom-right-radius: 15px;
+    box-shadow: 5px 5px 0px 0px rgb(37, 37, 37);
+}
+.navigation ul li.active:not(:first-child)::before
+{
+    content: '';
+    position: absolute;
+    display: flex;
+    background-color: transparent;
+    height: 25px;
+    width: 25px;
+    left: 100%;
+    top: 85px;
+    transform: translateX(-28px)translateY(-25px);
+    border-top-right-radius: 15px;
+    box-shadow: 5px -5px 0px 0px rgb(37, 37, 37);
+}
+.navigation ul li a .icon
+{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    line-height: 65px;
+    text-align: center;
+    margin-right: 2px;
+}
+.navigation ul li a .title
+{
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    font-family: 'Montserrat';
+    white-space: nowrap;
+    font-weight: 300;
+}

@@ -147,18 +147,9 @@ body
 {
     color: rgb(50, 139, 255);
 }
-.navigation ul li:hover:not(:first-child) a span
-{
-    text-shadow: 0px 0px 5px rgb(50, 139, 255);
-}
 .navigation ul li.active:not(:first-child) a
 {
     color: rgb(50, 139, 255);
-}
-
-.navigation ul li.active:not(:first-child) a span
-{
-    text-shadow: 0px 0px 5px rgb(50, 139, 255);
 }
 .navigation ul li:hover:not(:first-child):after
 {
